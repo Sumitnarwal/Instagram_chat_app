@@ -12,7 +12,7 @@ export const login = (formData) => async (dispatch) => {
     }
 }
 export const signUp = (formData) => async (dispatch) => {
-    console.log("signup")
+   // console.log("signup")
     dispatch({ type: "AUTH_START" })
     try {
         const { data } = await AuthApi.signUp(formData)
