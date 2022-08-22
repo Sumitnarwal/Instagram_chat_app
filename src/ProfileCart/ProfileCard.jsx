@@ -16,9 +16,20 @@ const ProfileCard = ({ location }) => {
     <div className='ProfileCard'>
       <div className='ProfileImages'>
         {  /* <img src={Cover} alt="cover" />*/}
-        <img src={user.coverPicture ? serverPublic + user.coverPicture : serverPublic + "defaultCover.jpg"} alt="cover" />
+        <img src={
+          user.coverPicture
+            ? serverPublic + user.coverPicture
+            : serverPublic + "defaultCover.jpg"
+        } alt="CoverImage" />
         {    /*  <img src={Profile} alt="profile" /> */}
-        <img src={user.coverPicture ? serverPublic + user.coverPicture : serverPublic + "defaultProfile.png"} alt="profile" />
+        <img
+          src={
+            user.profilePicture
+              ? serverPublic + user.profilePicture
+              : serverPublic + "defaultProfile.png"
+          }
+          alt="ProfileImage"
+        />
         <img />
       </div>
       <div className="ProfileName">
@@ -48,7 +59,7 @@ const ProfileCard = ({ location }) => {
               <div className="vl">
               </div>
               <div className="follow">
-                <span>{posts.filter((post) => post.userId === user.id).length}</span>
+                <span>{posts.filter((post) => post.userId === user._id).length}</span>
                 <span>Posts</span>
               </div>
             </>

@@ -11,8 +11,11 @@ export const login = (formData) => async (dispatch) => {
         dispatch({ type: "AUTH_FAIL" })
     }
 }
+
+
+
 export const signUp = (formData) => async (dispatch) => {
-   // console.log("signup")
+    // console.log("signup")
     dispatch({ type: "AUTH_START" })
     try {
         const { data } = await AuthApi.signUp(formData)
@@ -21,6 +24,10 @@ export const signUp = (formData) => async (dispatch) => {
         console.log(error)
         dispatch({ type: "AUTH_FAIL" })
     }
+}
+
+export const logOut = () => async (dispatch) => {
+    dispatch({ type: "LOG_OUT" })
 }
 
 
