@@ -18,4 +18,3 @@ export const ShareModel = ({ modelOpend, setModelOpend }) => {
         </Modal>
     );
 }
-
