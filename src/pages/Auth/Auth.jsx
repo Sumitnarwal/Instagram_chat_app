@@ -47,7 +47,7 @@ function Auth() {
             <div className='a-left'>
                 <img src={Logo} />
                 <div className='Webname'>
-                    <h1>ZKC Media</h1>
+                    <h1>Let's Chat</h1>
                     <h5>Explore the ideas throughout the world</h5>
                 </div>
             </div>
@@ -58,18 +58,48 @@ function Auth() {
                     <h3>{isSignUp ? "sign up" : "Login In"}</h3>
 
                     {isSignUp && <div>
-                        <input type={"text"} value={data.firstname} placeholder="First Name" className='infoInput' name='firstname' onChange={handleChange} />
-                        <input type={"text"} value={data.lastname} placeholder="Last Name" className='infoInput' name='lastname' onChange={handleChange} />
+                        <input 
+                        type={"text"} 
+                        value={data.firstname} 
+                        placeholder="First Name" 
+                        className='infoInput' 
+                        name='firstname' 
+                        onChange={handleChange} />
+                        <input 
+                        type={"text"} 
+                        value={data.lastname} 
+                        placeholder="Last Name" 
+                        className='infoInput' 
+                        name='lastname' 
+                        onChange={handleChange} />
                     </div>
                     }
                     <div>
-                        <input type="text"  value={data.username} className='infoInput' name='username' placeholder='Usernames' onChange={handleChange} />
+                        <input 
+                        type="text"  
+                        value={data.username} 
+                        className='infoInput' 
+                        name='username' 
+                        placeholder='Usernames' 
+                        onChange={handleChange} />
                     </div>
                     <div>
-                        <input type="password"  value={data.password} className='infoInput' name='password' placeholder='Password' onChange={handleChange} />
+                        <input 
+                        type="password"  
+                        value={data.password} 
+                        className='infoInput' 
+                        name='password' 
+                        placeholder='Password' 
+                        onChange={handleChange} />
 
                         {isSignUp &&
-                            <input type="password"  value={data.confirmpass} className='infoInput' name='confirmpass' placeholder='Conform Password' onChange={handleChange} />
+                            <input 
+                            type="password"  
+                            value={data.confirmpass} 
+                            className='infoInput' 
+                            name='confirmpass' 
+                            placeholder='Conform Password' 
+                            onChange={handleChange} />
                         }
                     </div>
                     <span style={{ display: confirmPass ? "none" : "block", color: "red", fontSize: "12px", alignSelf: "flex-end", marginRight: "15px" }}>
@@ -83,7 +113,8 @@ function Auth() {
                             }
                         </span>
                     </div>
-                    <button type='submit' className='button infoButton' dispatch={loading}>
+                    <button 
+                    type='submit' className='button infoButton' dispatch={loading}>
                         { loading? "Loading...": isSignUp ?
                             "Signup" : "Log In"
                         }

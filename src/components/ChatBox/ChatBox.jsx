@@ -137,7 +137,7 @@ const ChatBox = ({ chat, currentUser, setSendMessage, receivedMessage }) => {
                                         }
                                     >
                                         <span>{message.text}</span>{" "}
-                                        <span>{format(message.createdAt)}</span>
+                                     <span>{format(message.createdAt)}</span>   
                                     </div>
                                 </>
                             ))}

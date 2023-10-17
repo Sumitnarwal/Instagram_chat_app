@@ -33,27 +33,18 @@ const ProfileCard = ({ location }) => {
         <img />
       </div>
       <div className="ProfileName">
-        <span>{user.firstname}{" "} {user.lastname}</span>
-        {  /*   <span>Zendaya MJ</span> */}
-        {  /*<span>Senior UI/UX Designer</span> */}
-        <span>{user.worksAt ? user.worksAt : "Write about yourself"}</span>
+        <span>{user.firstname}{" "} {user.lastname}</span>  <span>{user.worksAt ? user.worksAt : "Write about yourself"}</span>
       </div>
       <div className="followStatus">
         <hr />
         <div>
           <div className="follow">
             <span>{user.following.length}</span>
-            <span>Followings</span>
-            {/* <span>6,890</span>
-              <span>Followings</span> */}
-          </div>
+            <span>Followings</span>   </div>
           <div className="vl"></div>
           <div className="follow">
             <span>{user.followers.length}</span>
-            <span>Followers</span>
-            {/*<span>1</span>
-                <span>Followers</span>*/}
-          </div>
+            <span>Followers</span>  </div>
           {location === "profilePage" && (
             <>
               <div className="vl">

@@ -22,6 +22,9 @@ const PostShare = () => {
         if (event.target.files && event.target.files[0]) {
             let img = event.target.files[0];
             setImage(img)
+           // setImage({
+           //     image : URL.createObjectURL(img)
+           // })
         }
     }
     const reset = () => {
@@ -92,7 +95,11 @@ const PostShare = () => {
 
                     </button>
                     <div style={{ display: "none" }}>
-                        <input type={"file"} name="myImage" ref={imageRef} onChange={onImageChange} />
+                        <input type={"file"} 
+                        name="myImage"
+                         ref={imageRef} 
+                         accept="image/png, image/gif, image/jpeg" 
+                         onChange={onImageChange} />
                     </div>
                 </div>
                 {image && (
